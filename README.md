@@ -8,20 +8,20 @@ Certainly this task is not easy. Usually deep learning models require thousands 
 # Project Objectives
 In this project, 4 different models are developed that can detect covid infected chest x-ray images. These models are: ResNet18, ResNet50, SqueezeNet, and DenseNet121 by following a transfer learning based approach, used google colaboratory and pytorch while developing our models and followed the following procedure while developing models.
 
-# Data pre-processing:
+Data pre-processing:
 In data preprocessing, resized the image, croped them, converted them into pytorch tensors, and normalized them using pre-computed mean and standard deviation.
 
 
-# Set the hyper-parameters: 
+Set the hyper-parameters: 
 Then set the hyper-parameters for our task. Here epochs, batch size, learning rate and momentum are treated as hyper-parameters.
 
-# Setup the model: 
+Setup the model: 
 A total of four models are developed. For each of them, used the pre-trained model provided pytorch, and as a part of transfer-learning modified the last layer according to our purpose. Cross-entropy-loss as is used as the loss function and stochastic-gradient-descent (SGD) as optimizer. To decay the learning rate based on epoch number we used pytoch’s “lr_scheduler.StepLR” class.
 
 
-# Model training: 
+Model training: 
 Pytorch provides a ‘DataLoader’ class which makes iterating over datasets much easier. It breaks the dataset into chunks (batches) according to the given batch size. This step is very essential as the model is not trained with the whole dataset at once, but we train our model with one batch after another.
 
 
-# Accuracy measurements: 
+Accuracy measurements: 
 After the training evaluated model’s performance based on the sensitivity, specificity, confusion matrix, and ROC curve. 
